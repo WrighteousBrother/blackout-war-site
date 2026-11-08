@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "ads": {
+    "free_missions_before_ads": 3,
+    "missions_between_forced_ads": 2,
+    "min_seconds_between_forced_ads": 180
+  },
+  "rewarded": {
+    "double_payout": {"enabled": true, "multiplier": 2},
+    "revive": {"enabled": true, "max_per_mission": 1},
+    "daily_crate": {"enabled": true, "cash": 500}
+  }
+}
