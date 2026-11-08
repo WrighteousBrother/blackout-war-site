@@ -26,11 +26,12 @@
 <p><strong>Game:</strong> The Blackout War (iPhone and iPad)<br>
 <strong>Publisher:</strong> Wright Family Publishing LLC<br>
 <strong>Contact:</strong> <a href="mailto:wrightfamilypublishing@gmail.com">wrightfamilypublishing@gmail.com</a><br>
-<strong>Effective date:</strong> November 7, 2026</p>
+<strong>Effective date:</strong> November 7, 2026<br>
+<strong>Updated:</strong> November 7, 2026</p>
 
 <p>This page explains, in plain words, what information the game uses and who sees it.
 The short version: your game saves stay on your device, we do not ask for your name or email in the game,
-and the only data that leaves your device is gameplay statistics (not linked to your name or email), ad requests,
+and the only data that leaves your device is gameplay statistics (not linked to your name or email, and you can turn them off), ad requests,
 and a request for a small public settings file.</p>
 
 <h2>1. What stays on your device</h2>
@@ -39,12 +40,13 @@ only on your device. We do not have a copy. If you delete the game, this data is
 There is no account and no cloud save in this version.</p>
 
 <h2>2. Ads (Google AdMob)</h2>
-<p>The game shows ads from Google AdMob. Ads never appear during a mission, and the first missions are ad-free.
-You can also choose optional ads that give a reward (for example a bonus payout, one revive, or a daily crate).</p>
+<p>The game shows ads from Google AdMob. Forced ads (the ones that appear on their own) never appear during a mission, right after you die, or in a mission you revived.
+Currently the first three missions are ad-free; this can change through the settings file (see section 5).</p>
+<p>Optional reward ads are ones you choose to watch: a bonus payout, one revive per mission (offered after you die), or a daily crate.</p>
 <ul>
-  <li><strong>If you allow tracking</strong> when Apple's "Allow tracking" prompt appears, AdMob and its ad partners may use
+  <li><strong>If the game asks for tracking permission</strong> (Apple's prompt) <strong>and you allow it</strong>, AdMob and its ad partners may use
   your device's advertising identifier to show ads that fit your interests and to measure ads.</li>
-  <li><strong>If you do not allow tracking</strong>, ads are not personalized with your advertising identifier.</li>
+  <li><strong>If you do not allow tracking, or are never asked</strong>, ads are not personalized with your advertising identifier.</li>
   <li><strong>In the European Economic Area and the United Kingdom</strong>, Google's consent form appears before personalized ads
   and lets you accept or decline. You can change your choice later by using the Privacy choices option in the game's settings.</li>
 </ul>
@@ -53,25 +55,43 @@ See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> an
 <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</p>
 
 <h2>3. Gameplay statistics (GameAnalytics)</h2>
+<p><strong>In short:</strong> We count what happens in the game, not who you are.
+You can turn it off in Settings.
+It is never linked to your name, email, or callsign.</p>
 <p>To balance and improve the game, it sends events to GameAnalytics, such as:
-mission started, completed, or failed; how long a mission took; difficulty chosen; cause of death;
+mission started, completed, failed, or left early; how long a mission took; difficulty chosen; cause of death;
 cash earned and spent; buying and selling in-game weapons with in-game cash; buying "Remove Ads";
 which ads were viewed; story scenes skipped; and session length.</p>
-<p>These events are not linked to your name or email, and we do not send your callsign. GameAnalytics's iOS software
-also sends:</p>
+<p>The data is "pseudonymous": it is tied to a code your device gives the game, not to your name, so we cannot tell who you are from it.
+It could still be traced back to your device, which is why it is not called anonymous. We do not send your callsign. GameAnalytics's iOS software also sends:</p>
 <ul>
-  <li>your device's vendor identifier (an ID Apple gives to all apps from the same publisher on your device), which it uses as your user ID;</li>
-  <li>your device's advertising identifier, <strong>only if you allow tracking</strong> in Apple's prompt, along with whether you allowed it;</li>
-  <li>device details such as the device model and the iOS and game versions;</li>
+  <li>your device's vendor identifier (a code Apple gives to all apps from the same publisher on your device), which it uses as your user ID;</li>
+  <li>your device's advertising identifier, <strong>only if the game asks for tracking permission and you allow it</strong>;</li>
+  <li>whether you allowed tracking;</li>
+  <li>device details: the manufacturer, platform and model, the iOS, game, game engine and GameAnalytics software versions, and your connection type (Wi-Fi, mobile, or offline);</li>
+  <li>a session ID and the number of sessions you have played;</li>
   <li>your IP address, which GameAnalytics uses to work out your approximate location (country or area). GameAnalytics says it does not store the full IP address with event data.</li>
 </ul>
-<p>Because these identifiers belong to your device, this data is better described as pseudonymous than anonymous.
-See <a href="https://www.gameanalytics.com/trust">GameAnalytics' privacy information</a>.</p>
+<p>The game turns off the GameAnalytics software's crash reporting and its hardware and memory reporting,
+so those are not sent.</p>
+<p><strong>Share gameplay statistics (your choice).</strong> Settings has a switch called "Share gameplay statistics". Your choice always wins.</p>
+<ul>
+  <li>It starts <strong>off</strong> for devices set to the European Economic Area, the UK, Switzerland, Brazil, South Korea or China,
+  for French-Canadian device settings, and whenever the game cannot tell the device's region. Nothing is sent until you turn it on.</li>
+  <li>Elsewhere it starts <strong>on</strong> only if Google's consent check also says consent is not required. Otherwise it starts off.</li>
+  <li>Turning it off stops the game from sending statistics. Data that GameAnalytics's software had already saved on your device
+  before you turned it off may still be sent if you turn the switch back on.</li>
+  <li>Data already sent stays with GameAnalytics until you ask us to delete it (see section 8).</li>
+</ul>
+<p><strong>Technical details.</strong> GameAnalytics's iOS software declares in its Apple privacy manifest that it can be used for "tracking" (domain tracking.gameanalytics.com).
+The data types it declares are: user ID, device ID, advertising data (only with tracking permission), product interaction, gameplay content,
+and performance and diagnostic data. See <a href="https://www.gameanalytics.com/trust">GameAnalytics' privacy information</a>.</p>
 
 <h2>4. Purchases (Apple)</h2>
-<p>The game has one optional in-app purchase, "Remove Ads". Purchases are handled entirely by Apple.
-We do not receive your card number, Apple ID, or other payment details. Apple tells the game only whether the purchase is valid,
-and "Restore Purchases" asks Apple to confirm it again.</p>
+<p>The game has one optional in-app purchase, "Remove Ads". It stops the ads that appear on their own between missions.
+The optional reward ads (bonus payout, revive, daily crate) stay available, because you choose to watch them.</p>
+<p>Purchases are handled entirely by Apple. We do not receive your card number, Apple ID, or other payment details.
+Apple tells the game only whether the purchase is valid, and "Restore Purchases" asks Apple to confirm it again.</p>
 
 <h2>5. The settings file</h2>
 <p>The game downloads a small public file from this website that tells it how often to show ads.
@@ -90,17 +110,42 @@ If you believe a child has given us personal information, contact us at <a href=
 <h2>8. Keeping and deleting data</h2>
 <ul>
   <li><strong>On your device:</strong> delete the game to remove your saves and settings.</li>
-  <li><strong>Analytics:</strong> because the data is not linked to your name or email, we usually cannot tell which events are yours.
-  If you want us to try to have analytics data for your device deleted, write to <a href="mailto:wrightfamilypublishing@gmail.com">wrightfamilypublishing@gmail.com</a> and tell us roughly when you installed and played the game.</li>
+  <li><strong>Analytics:</strong> because the data is not linked to your name or email, we cannot tell which events are yours without your ID.
+  To ask for your analytics data to be deleted, open Settings in the game, copy the "Statistics ID" shown there,
+  and email it to <a href="mailto:wrightfamilypublishing@gmail.com">wrightfamilypublishing@gmail.com</a>. We will ask GameAnalytics to delete the data linked to your Statistics ID and tell you the result.
+  The Statistics ID shows only while "Share gameplay statistics" is on and running. If you turned it off, turn it on, open Settings,
+  copy the ID and send it (you can turn it off again afterwards). Or just email us and we will help.</li>
   <li><strong>Ads:</strong> you can reset or limit your advertising identifier in iOS Settings, and change the tracking
   permission for this game at any time under Settings &gt; Privacy &amp; Security &gt; Tracking.</li>
 </ul>
 
-<h2>9. Changes to this policy</h2>
-<p>If we change this policy, we will post the new version on this page and update the effective date.
+<h2>9. Why we may use your data (legal basis)</h2>
+<p>We send gameplay statistics based on your consent, which you give or withdraw with the "Share gameplay statistics" switch.
+Personalized ads depend on your consent through Google's consent form and on Apple's tracking permission.</p>
+
+<h2>10. How long data is kept</h2>
+<p>Game saves stay on your device until you delete the game. We do not have a published retention period from GameAnalytics or Google to quote here.
+To find out how long data about you is kept, ask us at <a href="mailto:wrightfamilypublishing@gmail.com">wrightfamilypublishing@gmail.com</a>.</p>
+
+<h2>11. Your rights</h2>
+<p>You can withdraw your consent at any time (turn off "Share gameplay statistics", use Privacy choices, or turn off tracking in iOS).
+You can ask for access to, or deletion of, the statistics data linked to your Statistics ID (see section 8). We will ask GameAnalytics to provide (or delete) that data and tell you the result.
+You can also complain to your local data protection authority.</p>
+
+<h2>12. Transfers to other countries</h2>
+<p>Google, GameAnalytics and Mailchimp may process data in the United States and other countries.
+Their own privacy policies explain the safeguards they use.</p>
+
+<h2>13. US state privacy note</h2>
+<p>Under some US state laws, using the advertising identifier with AdMob can count as "sharing" data for advertising.
+To opt out, turn off tracking for this game in iOS (Settings &gt; Privacy &amp; Security &gt; Tracking), use the Privacy choices option in the game's settings where it is shown, and turn off Share gameplay statistics.</p>
+
+<h2>14. Changes to this policy</h2>
+<p>If we change this policy, we will post the new version on this page and change the "Updated" date at the top.
+The original effective date stays November 7, 2026.
 Material changes will also be described in the game's update notes.</p>
 
-<h2>10. Contact</h2>
+<h2>15. Contact</h2>
 <p>Wright Family Publishing LLC<br><a href="mailto:wrightfamilypublishing@gmail.com">wrightfamilypublishing@gmail.com</a></p>
 
 <p><a href="index.html">Back to The Blackout War</a></p>
